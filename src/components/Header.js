@@ -123,8 +123,11 @@ function CardList({ name }) {
 
   return (
     <div className="card-fan" id={`${id}-fan`}>
-      {suits.map((suit) => (
-        <img src={require(`../assets/cards/${name}_of_${suit}.png`)} />
+      {suits.map((suit, index) => (
+        <img
+          key={`${name}-${suit}-${index}`}
+          src={require(`../assets/cards/${name}_of_${suit}.png`)}
+        />
       ))}
     </div>
   );
