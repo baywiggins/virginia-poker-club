@@ -1,0 +1,125 @@
+.header-container {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  padding-right: 70px;
+  border: 10px solid rgb(27, 27, 27);
+  border-radius: 20px;
+  background-color: #00d700;
+  background-image: url("../../assets/felt.png");
+  z-index: 1000;
+}
+
+.header-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 3px solid rgb(255, 249, 85); /* This creates the yellow border */
+  border-radius: 40px; /* This rounds the corners of the border */
+  margin: 10px; /* This creates space between the header's edges and the yellow border */
+  z-index: -1; /* This ensures the border is behind the header's other content */
+}
+
+.logo-container img {
+  height: 90px; /* Adjust to your liking */
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.logo {
+  max-height: 100%;
+  width: auto;
+  margin: 5px;
+}
+
+.link {
+  z-index: 3;
+}
+
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+nav ul li {
+  position: relative;
+  margin: 0;
+}
+
+nav ul li a {
+  border: 2px solid rgb(21, 0, 255);
+  border-radius: 5px;
+  background-color: rgb(255, 145, 0);
+  font-size: small;
+  position: relative;
+  color: black;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  padding: 3px;
+}
+
+.card-fan {
+  position: absolute;
+  top: -60%;
+  left: -8%;
+  bottom: 0%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+#exec-fan {
+  position: absolute;
+  left: 14%;
+}
+
+#leaderboard-fan {
+  position: absolute;
+  left: 17%;
+}
+
+#join-fan {
+  position: absolute;
+  left: -24%;
+}
+
+.card-fan img {
+  height: 70px;
+  position: absolute;
+  border: 2px solid black;
+  border-radius: 3px;
+  transform-origin: center 170px;
+  transition: all 0.05s linear;
+}
+
+nav ul li:hover .card-fan img:first-child {
+  transform: rotate(15deg);
+}
+
+nav ul li:hover .card-fan img:nth-child(2) {
+  transform: rotate(5deg);
+}
+
+nav ul li:hover .card-fan img:nth-child(3) {
+  transform: rotate(-5deg);
+}
+
+nav ul li:hover .card-fan img:last-child {
+  transform: rotate(-15deg);
+}
