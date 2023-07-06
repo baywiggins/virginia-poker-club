@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState, useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import img1 from "../../assets/vpc_image1.jpeg"; // replace with the path to your images
@@ -9,11 +9,7 @@ import "../styles/HomeSection.css";
 const HomeSection = () => {
   return (
     <section id="home">
-      <div className="meeting-info">
-        <h2>Next Meeting</h2>
-        <p>Time: 7:00 PM</p>
-        <p>Location: Room 101</p>
-      </div>
+      <NextMeeting />
       <div>
         <Carousel
           autoPlay
@@ -36,5 +32,31 @@ const HomeSection = () => {
     </section>
   );
 };
+
+function NextMeeting() {
+  const [event, setEvent] = useState({});
+
+  useEffect(() => {
+    const fetchEvents = async () => {
+      const res = await fetch("/calendar/next-event");
+      const data = await res.json();
+      setEvent(data);
+    };
+
+    fetchEvents();
+  }, []);
+  return (
+    <div className="meeting-info">
+      <h3>Next event</h3>
+      <p>Name: {event.name}</p>
+      <p>
+        Time: {event.start_time} - {event.end_time}
+      </p>
+      <p>
+        Location: {event.room}, {event.room_number}
+      </p>
+    </div>
+  );
+}
 
 export default HomeSection;
