@@ -6,7 +6,7 @@
   align-items: center;
   padding: 15px;
   padding-right: 70px;
-  border: 10px solid rgb(27, 27, 27);
+  border: 8px solid rgb(27, 27, 27);
   border-radius: 20px;
   background-color: #00d700;
   background-image: url("../../assets/felt.png");
@@ -20,14 +20,14 @@
   right: 0;
   bottom: 0;
   left: 0;
-  border: 3px solid rgb(255, 249, 85); /* This creates the yellow border */
+  border: 2px solid rgb(255, 249, 85); /* This creates the yellow border */
   border-radius: 40px; /* This rounds the corners of the border */
   margin: 10px; /* This creates space between the header's edges and the yellow border */
   z-index: -1; /* This ensures the border is behind the header's other content */
 }
 
 .logo-container img {
-  height: 90px; /* Adjust to your liking */
+  height: 80px; /* Adjust to your liking */
   display: flex;
   align-items: center;
   margin-right: 50px;

@@ -5,10 +5,10 @@ import testImage from "../../assets/full_logo.png";
 
 const boardMembers = [
   {
-    name: "Pranav",
+    name: "Pranav Kandlakunta",
     title: "President",
     image: testImage,
-    bio: "Pranav is a third year Computer Science + Mathematics double major. He is a degenerate gambler",
+    bio: "Pranav is a third year Computer Science + Mathematics double major. He is a degenerate gambler. More stupid useless information blah.",
   },
   {
     name: "Deniz",
@@ -52,7 +52,6 @@ const boardMembers = [
 const ExecBoardSection = () => {
   return (
     <section id="exec-board">
-      <h2>Exec Board</h2>
       <div className="board-members">
         {boardMembers.map((member, index) => (
           <div

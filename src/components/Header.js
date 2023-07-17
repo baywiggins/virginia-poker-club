@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-scroll";
 import "./styles/Header.css";
-import logo from "../assets/pokerchip_logo.png";
+import logo from "../assets/full_logo.png";
 
 const Header = () => {
   return (
