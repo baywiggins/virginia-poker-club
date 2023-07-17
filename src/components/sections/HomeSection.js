@@ -9,7 +9,7 @@ import "../styles/HomeSection.css";
 const HomeSection = () => {
   return (
     <section id="home">
-      <NextMeeting />
+      <NextMeeting className="next-meeting" />
       <div>
         <Carousel
           autoPlay

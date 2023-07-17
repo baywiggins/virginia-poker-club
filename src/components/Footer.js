@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles/Footer.css";
 import { SocialIcon } from "react-social-icons";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -18,6 +19,9 @@ const Footer = () => {
             />
           </li>
         </ul>
+        <Link className="login-link" to="/login">
+          Login
+        </Link>
       </div>
     </footer>
   );

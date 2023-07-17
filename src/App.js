@@ -1,15 +1,23 @@
 import React from "react";
-import Header from "./components/Header";
 import Main from "./components/Main";
-import Footer from "./components/Footer";
-
+import Login from "./components/admin_components/Login";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AdminDashboard from "./components/admin_components/AdminDashboard";
+import PrivateElement from "./components/admin_components/PrivateElement";
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Main />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route
+            path="/admin-dashboard"
+            element={<PrivateElement element={<AdminDashboard />} />}
+          />
+          <Route path="/login" element={<Login />} />
+          <Route path="*" element={<Main />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
