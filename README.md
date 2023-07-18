@@ -1,1 +1,1 @@
-Virginia Poker Club
+Virginia Poker Club is epic
