@@ -8,7 +8,6 @@ function Login() {
   async function handleLogin(e) {
     e.preventDefault();
 
-    // Here you might want to call your API to log in the user
     const email = e.target.email.value;
     const password = e.target.password.value;
     const response = await fetch("/admin/token", {
@@ -35,7 +34,7 @@ function Login() {
 
   return (
     <form onSubmit={handleLogin}>
-      <input name="email" type="email" placeholder="Email" />
+      <input name="user" type="username" placeholder="Username" />
       <input name="password" type="password" placeholder="Password" />
       <button type="submit">Log in</button>
     </form>
