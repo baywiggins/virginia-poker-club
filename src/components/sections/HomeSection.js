@@ -48,18 +48,29 @@ function NextMeeting() {
 
     fetchEvents();
   }, []);
-  return (
-    <div className="meeting-info">
-      <h3>Next event</h3>
-      <p>Name: {event.name}</p>
-      <p>
-        Time: {event.start_time} - {event.end_time}
-      </p>
-      <p>
-        Location: {event.room}, {event.room_number}
-      </p>
-    </div>
-  );
+  if (event.name && event.start_time && event.room) {
+    return (
+      <div className="meeting-info">
+        <h3>Next event</h3>
+        <p>Name: {event.name}</p>
+        <p>
+          Time: {event.start_time} - {event.end_time}
+        </p>
+        <p>
+          Location: {event.room}, {event.room_number}
+        </p>
+      </div>
+    );
+  } else {
+    return (
+      <div className="meeting-info">
+        <h3>Next event</h3>
+        <p>Name: Not Found</p>
+        <p>Time: Not Found</p>
+        <p>Location: Not Found</p>
+      </div>
+    );
+  }
 }
 
 export default HomeSection;
