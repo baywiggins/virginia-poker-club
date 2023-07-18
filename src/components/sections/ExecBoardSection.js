@@ -3,6 +3,8 @@ import "../styles/ExecBoardSectionAnimations.css";
 import "../styles/ExecBoardSection.css";
 import testImage from "../../assets/full_logo.png";
 
+// Dict of exec members to be mapped onto the website.
+// Allows for easy addition/subtractions of members
 const boardMembers = [
   {
     name: "Pranav Kandlakunta",
@@ -26,7 +28,7 @@ const boardMembers = [
     name: "Bay Wiggins",
     title: "Outreach Chair",
     image: testImage,
-    bio: "Bio 2",
+    bio: "Bay is a third year working on his Masters in CS. He enjoys coding, and developed this website!",
   },
   {
     name: "Jane Doe",
@@ -46,10 +48,10 @@ const boardMembers = [
     image: testImage,
     bio: "Bio 3",
   },
-  // ... add more board members
 ];
 
 const ExecBoardSection = () => {
+  // Iterates over boardMembers, and creates JSX array for each of them
   return (
     <section id="exec-board">
       <div className="board-members">
