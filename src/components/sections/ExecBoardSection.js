@@ -1,7 +1,9 @@
 import React from "react";
 import "../styles/ExecBoardSectionAnimations.css";
 import "../styles/ExecBoardSection.css";
-import testImage from "../../assets/full_logo.png";
+import placeholderImage from "../../assets/full_logo.png";
+import KAImage from "../../assets/exec_photos/KAImage.png";
+import BWImage from "../../assets/exec_photos/BWImage.png";
 
 // Dict of exec members to be mapped onto the website.
 // Allows for easy addition/subtractions of members
@@ -9,44 +11,20 @@ const boardMembers = [
   {
     name: "Pranav Kandlakunta",
     title: "President",
-    image: testImage,
+    image: placeholderImage,
     bio: "Pranav is a third year Computer Science + Mathematics double major. He is a degenerate gambler. More stupid useless information blah.",
-  },
-  {
-    name: "Deniz",
-    title: "Vice President",
-    image: testImage,
-    bio: "Bio 2",
-  },
-  {
-    name: "John Doe",
-    title: "Secretary",
-    image: testImage,
-    bio: "Bio 2",
   },
   {
     name: "Bay Wiggins",
     title: "Outreach Chair",
-    image: testImage,
-    bio: "Bay is a third year working on his Masters in CS. He enjoys coding, and developed this website!",
+    image: BWImage,
+    bio: "Bay is a third year working on his Masters in CS. He enjoys coding personal projects (including this website), hiking, and shoving river as a bluff.",
   },
   {
-    name: "Jane Doe",
-    title: "Finance Chair",
-    image: testImage,
-    bio: "Bio 2",
-  },
-  {
-    name: "Ben Dover",
-    title: "Education Chair",
-    image: testImage,
-    bio: "Bio 2",
-  },
-  {
-    name: "Harry Asian",
-    title: "Social Chair",
-    image: testImage,
-    bio: "Bio 3",
+    name: "Kunaal Agarwal",
+    title: "Treasurer",
+    image: KAImage,
+    bio: "Kunaal is a third year Computer Science and Biology double major. Outside of the classroom he enjoys to play tennis, chess, and punting off his stack.",
   },
 ];
 

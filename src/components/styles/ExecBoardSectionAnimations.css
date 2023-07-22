@@ -17,21 +17,46 @@
   overflow: hidden; /* Ensure the contents don't spill out */
 }
 
-.member-info,
-.member-bio {
+.member-info {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 50%;
+  height: 35%;
   padding: 20px;
   box-sizing: border-box;
   transition: transform 0.3s ease;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  line-height: 0;
+}
+
+.member-bio {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.member-info h3,
+.member-info p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.member-bio h3,
+.member-bio p {
+  margin: 0;
+  line-height: 2;
 }
 
 .member-info {
