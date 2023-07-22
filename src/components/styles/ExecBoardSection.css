@@ -19,7 +19,7 @@
   transform: translateX(-50%);
   width: 98%;
   height: 30px;
-  background-color: beige;
+  background-color: lightblue;
   border: 2px solid black;
   border-radius: 15px 15px 0 0;
   display: flex;
@@ -31,7 +31,7 @@
 #favorite-hand-text {
   font-size: small;
   white-space: nowrap; /* Prevent text from wrapping */
-  margin-right: 30px; /* Reduced margin */
+  margin-right: 20px; /* Reduced margin */
 }
 
 .fav-hand-tab div {

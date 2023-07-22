@@ -22,8 +22,8 @@ const HomeSection = () => {
           showThumbs={false}
         >
           {images.map((image, index) => (
-            <div>
-              <img src={image} alt="slide" key={index} />
+            <div key={index}>
+              <img src={image} alt="slide" />
             </div>
           ))}
         </Carousel>

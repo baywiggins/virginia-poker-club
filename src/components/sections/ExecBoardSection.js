@@ -16,24 +16,62 @@ const boardMembers = [
   {
     name: "Pranav Kandlakunta",
     title: "President",
-    image: PKImage,
-    bio: "Pranav is a third year Computer Science + Mathematics double major. He is a degenerate gambler. More stupid useless information blah.",
+    img: PKImage,
+    bio: "Pranav is a third year Computer Science + Mathematics double major. He is a degenerate gambler.",
     favorite_hand: [
-      [7, diamond],
-      [7, heart],
+      [4, club],
+      [2, heart],
+    ],
+  },
+  {
+    name: "Deniz Olgun",
+    title: "Vice President",
+    img: placeholderImage,
+    bio: "Deniz",
+    favorite_hand: [
+      ["A", diamond],
+      ["A", heart],
     ],
   },
   {
     name: "Bay Wiggins",
     title: "Outreach Chair",
-    image: BWImage,
+    img: BWImage,
     bio: "Bay is a third year working on his Masters in CS. He enjoys coding personal projects (including this website), hiking, and shoving river as a bluff.",
+    favorite_hand: [
+      [6, heart],
+      [9, heart],
+    ],
   },
   {
     name: "Kunaal Agarwal",
     title: "Treasurer",
-    image: KAImage,
+    img: KAImage,
     bio: "Kunaal is a third year Computer Science and Biology double major. Outside of the classroom he enjoys to play tennis, chess, and punting off his stack.",
+    favorite_hand: [
+      [10, diamond],
+      [9, diamond],
+    ],
+  },
+  {
+    name: "Thomas Phillips",
+    title: "Secretary",
+    img: placeholderImage,
+    bio: "Tom",
+    favorite_hand: [
+      ["A", diamond],
+      ["A", heart],
+    ],
+  },
+  {
+    name: "Harry Li",
+    title: "Social Chair",
+    img: placeholderImage,
+    bio: "Asian",
+    favorite_hand: [
+      ["A", diamond],
+      ["A", heart],
+    ],
   },
 ];
 
@@ -56,7 +94,7 @@ const ExecBoardSection = () => {
             </div>
             <div
               className="member-card"
-              style={{ backgroundImage: `url(${member.image})` }}
+              style={{ backgroundImage: `url(${member.img})` }}
             >
               <div className="member-info">
                 <h3>{member.title}</h3>
