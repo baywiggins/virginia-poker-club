@@ -13,6 +13,7 @@ const boardMembers = [
     title: "President",
     image: placeholderImage,
     bio: "Pranav is a third year Computer Science + Mathematics double major. He is a degenerate gambler. More stupid useless information blah.",
+    favorite_hand: "",
   },
   {
     name: "Bay Wiggins",
@@ -34,17 +35,21 @@ const ExecBoardSection = () => {
     <section id="exec-board">
       <div className="board-members">
         {boardMembers.map((member, index) => (
-          <div
-            className="member-card"
-            key={index}
-            style={{ backgroundImage: `url(${member.image})` }} // set background image here
-          >
-            <div className="member-info">
-              <h3>{member.title}</h3>
-              <p>{member.name}</p>
+          <div className="card-wrapper" key={index}>
+            <div className="member-tab">
+              <p>{member.favorite_hand}</p>
             </div>
-            <div className="member-bio">
-              <p>{member.bio}</p>
+            <div
+              className="member-card"
+              style={{ backgroundImage: `url(${member.image})` }} // set background image here
+            >
+              <div className="member-info">
+                <h3>{member.title}</h3>
+                <p>{member.name}</p>
+              </div>
+              <div className="member-bio">
+                <p>{member.bio}</p>
+              </div>
             </div>
           </div>
         ))}
