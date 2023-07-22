@@ -4,6 +4,7 @@ import "../styles/ExecBoardSection.css";
 import placeholderImage from "../../assets/full_logo.png";
 import KAImage from "../../assets/exec_photos/KAImage.png";
 import BWImage from "../../assets/exec_photos/BWImage.png";
+import PKImage from "../../assets/exec_photos/PKImage.png";
 
 // Dict of exec members to be mapped onto the website.
 // Allows for easy addition/subtractions of members
@@ -11,7 +12,7 @@ const boardMembers = [
   {
     name: "Pranav Kandlakunta",
     title: "President",
-    image: placeholderImage,
+    image: PKImage,
     bio: "Pranav is a third year Computer Science + Mathematics double major. He is a degenerate gambler. More stupid useless information blah.",
     favorite_hand: "",
   },
