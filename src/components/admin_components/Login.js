@@ -2,13 +2,18 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useToken from "./useToken";
 
+// Define the Login function component.
 function Login() {
   const [error, setError] = useState(""); // State to store the error message
   const { setToken } = useToken();
   const navigate = useNavigate();
 
+
+  // Define an async function to handle the login.
   async function handleLogin(e) {
+    // Prevent the default form submission behavior.
     e.preventDefault();
+
 
     const username = e.target.username.value;
     const password = e.target.password.value;
@@ -40,6 +45,8 @@ function Login() {
     }
   }
 
+  // Render a form with email and password fields and a submit button.
+  // When the form is submitted, the handleLogin function will be called.
   return (
     <form onSubmit={handleLogin}>
       <input name="username" type="text" placeholder="Username" />
@@ -50,4 +57,5 @@ function Login() {
   );
 }
 
+// Export the Login component as the default export of this module.
 export default Login;
