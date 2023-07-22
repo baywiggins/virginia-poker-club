@@ -4,3 +4,52 @@
   align-items: center;
   justify-content: center;
 }
+
+.card-wrapper {
+  position: relative;
+  width: 200px;
+  height: 230px; /* increased height to accommodate the tab */
+  margin: 10px;
+}
+
+.fav-hand-tab {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 98%;
+  height: 30px;
+  background-color: beige;
+  border: 2px solid black;
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#favorite-hand-text {
+  font-size: small;
+  white-space: nowrap; /* Prevent text from wrapping */
+  margin-right: 30px; /* Reduced margin */
+}
+
+.fav-hand-tab div {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 3px;
+  margin: 2px; /* Reduced margin */
+  margin-bottom: 4px;
+  padding: 2px;
+}
+
+.fav-hand-tab p {
+  margin: 0; /* No margins */
+}
+
+.fav-hand-tab img {
+  width: 18px; /* Reduced size */
+  height: 18px; /* Reduced size */
+  margin-left: 2px; /* Adjust as needed */
+}

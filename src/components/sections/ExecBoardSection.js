@@ -5,6 +5,10 @@ import placeholderImage from "../../assets/full_logo.png";
 import KAImage from "../../assets/exec_photos/KAImage.png";
 import BWImage from "../../assets/exec_photos/BWImage.png";
 import PKImage from "../../assets/exec_photos/PKImage.png";
+import heart from "../../assets/cards/suits/heart.png";
+import diamond from "../../assets/cards/suits/diamond.png";
+import spade from "../../assets/cards/suits/spade.png";
+import club from "../../assets/cards/suits/club.png";
 
 // Dict of exec members to be mapped onto the website.
 // Allows for easy addition/subtractions of members
@@ -14,7 +18,10 @@ const boardMembers = [
     title: "President",
     image: PKImage,
     bio: "Pranav is a third year Computer Science + Mathematics double major. He is a degenerate gambler. More stupid useless information blah.",
-    favorite_hand: "",
+    favorite_hand: [
+      [7, diamond],
+      [7, heart],
+    ],
   },
   {
     name: "Bay Wiggins",
@@ -37,12 +44,19 @@ const ExecBoardSection = () => {
       <div className="board-members">
         {boardMembers.map((member, index) => (
           <div className="card-wrapper" key={index}>
-            <div className="member-tab">
-              <p>{member.favorite_hand}</p>
+            <div className="fav-hand-tab">
+              <p id="favorite-hand-text">Favorite Hand: </p>
+              {member.favorite_hand &&
+                member.favorite_hand.map((card, i) => (
+                  <div key={i}>
+                    <p>{card[0]}</p> {/* display card value */}
+                    <img src={card[1]} alt="card suit" />
+                  </div>
+                ))}
             </div>
             <div
               className="member-card"
-              style={{ backgroundImage: `url(${member.image})` }} // set background image here
+              style={{ backgroundImage: `url(${member.image})` }}
             >
               <div className="member-info">
                 <h3>{member.title}</h3>
