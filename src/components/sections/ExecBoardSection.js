@@ -19,7 +19,7 @@ const boardMembers = [
     img: PKImage,
     bio: "Pranav is a third year Computer Science + Mathematics double major. He is a degenerate gambler.",
     favorite_hand: [
-      [4, club],
+      [4, diamond],
       [2, heart],
     ],
   },
